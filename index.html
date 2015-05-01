@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Color Range Selector</title>
+</head>
+<body>
+
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			font-weight: normal;
+			font-family: arial;
+			outline:none;
+		}
+		.wrapper{
+			overflow: hidden;
+			max-width: 600px;
+			width: 100%;
+			margin: 0 auto;
+		}
+		#box{
+			width: 200px;
+			height: 200px;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			background-color: rgb(0, 0, 0);
+		}
+		#page{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		dt{
+			float:left;
+			width: 100px;
+		}
+		dd{
+			
+		}
+		h1{
+			border-bottom: 1px solid #000;
+			padding-bottom: 5px;
+			margin-bottom: 20px;
+		}
+		h2{
+			color: rgb(255, 255, 255);
+		}
+		.boxWrap{
+			float: left;
+			margin-right: 25px;
+		}
+		.boxPro {
+		    width: 360px;
+		    margin-bottom: 8px;
+		}
+		.select{
+			float: right;
+		}
+	</style>
+	
+	<div id="wrapper" class="wrapper">
+		<div id="page">
+			<h1>Color Selector Javascript</h1>
+			<div class="boxWrap">
+				<div id="box">
+					<h2>Bijoy Sen</h2>
+				</div>
+			</div>
+			
+			<div class="select">
+
+				<div class="boxPro">
+					<h3>Box Color</h3>
+					<dl>
+						<dt>Red</dt>
+						<dd><input type="range" min="0" max="255" value="0" id="r" name="r"></dd>
+
+						<dt>Green</dt>
+						<dd><input type="range" min="0" max="255" value="0" id="g" name="g"></dd>
+
+						<dt>Blue</dt>
+						<dd><input type="range" min="0" max="255" value="0" id="b" name="b"></dd>
+					</dl>
+				</div>
+					
+				<div class="boxPro">
+					<h3>Text Color</h3>
+					<dl>
+						<dt>Red</dt>
+						<dd><input type="range" min="0" max="255" value="255" id="red" name="red"></dd>
+
+						<dt>Green</dt>
+						<dd><input type="range" min="0" max="255" value="255" id="green" name="green"></dd>
+
+						<dt>Blue</dt>
+						<dd><input type="range" min="0" max="255" value="255" id="blue" name="blue"></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+
+	<script>
+		!function(){function e(){var e=document.createElement("input");return e.setAttribute("type","range"),"range"===e.type}function t(){var e=window.innerHeight;document.getElementById("page").style.height=e-60+"px"}var n,o,r,u,c,d,l,a;e&&(n=document.querySelector("#box"),o=document.querySelector("#r"),r=document.querySelector("#g"),u=document.querySelector("#b"),c=document.querySelector("h2"),d=document.querySelector("#red"),l=document.querySelector("#green"),a=document.querySelector("#blue"),document.body.addEventListener("change",function(){n.style.backgroundColor="rgb("+[o.value,r.value,u.value].join(",")+")"},!1),document.body.addEventListener("change",function(){c.style.color="rgb("+[d.value,l.value,a.value].join(",")+")"},!1)),t(),window.onresize=function(){t()}}();
+	</script>
+
+</body>
+</html>
